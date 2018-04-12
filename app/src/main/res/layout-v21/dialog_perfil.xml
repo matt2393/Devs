@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imagen_perfil"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USUARIO"
+            android:id="@+id/user_perfil"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:layout_margin="15dp"
+            android:textColor="#fff"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Link" 
+            android:id="@+id/link_perfil"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/color_boton"
+            android:textColor="#fff"/>
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repositorios"
+            android:textAllCaps="false"
+            android:id="@+id/repos_perfil"
+            android:backgroundTint="@color/color_boton"
+            android:textColor="#fff"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:textAllCaps="false"
+            android:id="@+id/cerrar_perfil"
+            android:backgroundTint="@color/color_boton"
+            android:textColor="#fff"/>
+        
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
