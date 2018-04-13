@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 /**
  * Created by matt2393 on 11-04-18.
+ * ViewHolder de los repositorios
+ * contiene dos Textos y el cardView para escuchar si evento Click
  */
 
 public class ViewHolderRep extends RecyclerView.ViewHolder {

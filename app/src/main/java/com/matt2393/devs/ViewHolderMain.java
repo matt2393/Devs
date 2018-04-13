@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 /**
  * Created by matt2393 on 11-04-18.
+ * ViewHolder para la pantalla principal
+ * que mostrara una imagen, y un texto
+ * ademas se tiene el LinearLayout para escuchar su evento Click
  */
 
 public class ViewHolderMain extends RecyclerView.ViewHolder {

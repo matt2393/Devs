@@ -1,10 +1,15 @@
 package com.matt2393.devs;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by matt2393 on 11-04-18.
+ * Modelo para guardar información del desarrollador
+ * implementando Parcelable para poder mandarlo en Bundle
  */
 
-public class ModelDev {
+public class ModelDev implements Parcelable {
     private int id;
     private String login,avatar_url;
     private String html_url,repos_url;
@@ -61,4 +66,38 @@ public class ModelDev {
     public void setRepos_url(String repos_url) {
         this.repos_url = repos_url;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.id);
+        dest.writeString(this.login);
+        dest.writeString(this.avatar_url);
+        dest.writeString(this.html_url);
+        dest.writeString(this.repos_url);
+    }
+
+    protected ModelDev(Parcel in) {
+        this.id = in.readInt();
+        this.login = in.readString();
+        this.avatar_url = in.readString();
+        this.html_url = in.readString();
+        this.repos_url = in.readString();
+    }
+
+    public static final Parcelable.Creator<ModelDev> CREATOR = new Parcelable.Creator<ModelDev>() {
+        @Override
+        public ModelDev createFromParcel(Parcel source) {
+            return new ModelDev(source);
+        }
+
+        @Override
+        public ModelDev[] newArray(int size) {
+            return new ModelDev[size];
+        }
+    };
 }
